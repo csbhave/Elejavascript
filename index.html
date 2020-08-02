@@ -4,20 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Test Logic</title>
+<style>
+    #error{
+        padding: 10px;
+    }
+    .bg-red{
+        color: #fff;
+        background: red;
+    }
+    .bg-green{
+        color: #fff;
+        background: green;
+    }
+    .bg-green{
+        color: #fff;
+        background: orange;
+    }
+</style>
 </head>
 <body>
     <form action="">
-        <label for="">Value 1: </label>
+        <label for="">Circuit 1: </label>
         <input type="text" id="value1" disabled><br><br>
-        <label for="">value 2: </label>
+        <label for="">Circuit 2: </label>
         <input type="text" id="value2" disabled><br><br>
-        <input type="button" value="roll no 1" onclick="roll1()">
+        <!-- <input type="button" value="roll no 1" onclick="roll1()">
         <input type="button" value="roll no 2" onclick="roll2()">
-        <input type="button" value="roll both" onclick="roll()">
-
-    </form><br><br>
-    <span id="error">Reading inputs...</span>
+        <input type="button" value="roll both" onclick="roll()"> -->
+    </form><br>
     <hr>
+    <label for=""><strong>Unmatched Value Counter: </strong></label>
+    <span id="unmatch_counter">No Data Received...</span><br><br>
+    <label for=""><strong>Last Unmatched Value of circuit 1:</strong> </label>
+    <span id="unmatch_value1op">No Data Received...</span><br><br>
+    <label for=""><strong>Last Unmatched Value of circuit 2:</strong> </label>
+    <span id="unmatch_value2op">No data Received...</span><br><br>  
+    <hr>
+    <label for=""><strong>Matched Value Counter: </strong></label>
+    <span id="counter">No Data Received...</span><br><br>
+    <label for=""><strong>Last Matched Value of circuit 1:</strong> </label>
+    <span id="value1op">No Data Received...</span><br><br>
+    <label for=""><strong>Last Matched Value of circuit 2:</strong> </label>
+    <span id="value2op">No data Received...</span><br><br>
+    <strong><span id="error">Reading Inputs...</span></strong><br><br>
+    <hr>
+    
     <script src="script.js"></script>
 </body>
 </html>
