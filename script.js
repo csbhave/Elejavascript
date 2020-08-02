@@ -51,7 +51,7 @@ function check(){
 setInterval(() => {
     roll();
     check();
-}, 1000);
+}, 5000);
 
 function addMatchedValue(){
     var m_table = document.getElementById("m_table"),
