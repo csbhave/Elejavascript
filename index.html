@@ -20,35 +20,68 @@
         color: #fff;
         background: orange;
     }
+    .table-wrapper{
+        display: flex;
+        justify-content: space-around;
+    }
+    .main{
+        display: flex;
+        justify-content: space-around;
+    }
 </style>
 </head>
 <body>
-    <form action="">
-        <label for="">Circuit 1: </label>
-        <input type="text" id="value1" disabled><br><br>
-        <label for="">Circuit 2: </label>
-        <input type="text" id="value2" disabled><br><br>
-        <!-- <input type="button" value="roll no 1" onclick="roll1()">
-        <input type="button" value="roll no 2" onclick="roll2()">
-        <input type="button" value="roll both" onclick="roll()"> -->
-    </form><br>
-    <hr>
-    <label for=""><strong>Unmatched Value Counter: </strong></label>
-    <span id="unmatch_counter">No Data Received...</span><br><br>
-    <label for=""><strong>Last Unmatched Value of circuit 1:</strong> </label>
-    <span id="unmatch_value1op">No Data Received...</span><br><br>
-    <label for=""><strong>Last Unmatched Value of circuit 2:</strong> </label>
-    <span id="unmatch_value2op">No data Received...</span><br><br>  
-    <hr>
-    <label for=""><strong>Matched Value Counter: </strong></label>
-    <span id="counter">No Data Received...</span><br><br>
-    <label for=""><strong>Last Matched Value of circuit 1:</strong> </label>
-    <span id="value1op">No Data Received...</span><br><br>
-    <label for=""><strong>Last Matched Value of circuit 2:</strong> </label>
-    <span id="value2op">No data Received...</span><br><br>
-    <strong><span id="error">Reading Inputs...</span></strong><br><br>
-    <hr>
-    
+<div class="main">
+    <div class="form">
+        <form action="">
+            <label for="">Circuit 1: </label>
+            <input type="text" id="value1" disabled><br><br>
+            <label for="">Circuit 2: </label>
+            <input type="text" id="value2" disabled><br><br>
+            <!-- <input type="button" value="roll no 1" onclick="roll1()">
+            <input type="button" value="roll no 2" onclick="roll2()">
+            <input type="button" value="roll both" onclick="roll()"> -->
+        </form><br>
+        <hr>
+        <label for=""><strong>Unmatched Value Counter: </strong></label>
+        <span id="unmatch_counter">No Data Received...</span><br><br>
+        <label for=""><strong>Last Unmatched Value of circuit 1:</strong> </label>
+        <span id="unmatch_value1op">No Data Received...</span><br><br>
+        <label for=""><strong>Last Unmatched Value of circuit 2:</strong> </label>
+        <span id="unmatch_value2op">No data Received...</span><br><br>  
+        <hr>
+        <label for=""><strong>Matched Value Counter: </strong></label>
+        <span id="counter">No Data Received...</span><br><br>
+        <label for=""><strong>Last Matched Value of circuit 1:</strong> </label>
+        <span id="value1op">No Data Received...</span><br><br>
+        <label for=""><strong>Last Matched Value of circuit 2:</strong> </label>
+        <span id="value2op">No data Received...</span><br><br>
+        <strong><span id="error">Reading Inputs...</span></strong><br><br>
+        <hr>
+    </div>
+    <div class="table-wrapper">
+        <div>
+            <table id="m_table" border="1">
+                <h2>Matched Value table</h2>
+                <tr>
+                    <th>circuit 1</th>
+                    <th>circuit 2</th>
+                    <th>counter</th>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <table id="unm_table" border="1">
+                <h2>Unmatched Value table</h2>
+                <tr>
+                <th>circuit 1</th>
+                <th>circuit 2</th>
+                <th>counter</th>
+            </tr>
+        </table>
+        </div>
+    </div>    
+</div>        
     <script src="script.js"></script>
 </body>
 </html>

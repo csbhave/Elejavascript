@@ -1,8 +1,11 @@
 var value1 = document.getElementById("value1");
 var value2 = document.getElementById("value2");
+var table1 = document.getElementById("table1");
+
 var arr1=[];
 var arr2=[];
 var cnt=0, cnt1=0;
+
 function check(){
     if(value1.value.length == 0  && value2.value.length == 0){
         console.log("cannot received both value");
@@ -16,6 +19,7 @@ function check(){
         document.getElementById("error").classList.add("bg-green");
         document.getElementById("error").innerHTML = "value accepted!";        
         cnt++;
+        addMatchedValue();
         collection();
         return true;
     }
@@ -38,9 +42,9 @@ function check(){
         cnt1++;
         document.getElementById("unmatch_counter").innerHTML = cnt1;
         document.getElementById("unmatch_value1op").innerHTML = value1.value;
-        document.getElementById("unmatch_value2op").innerHTML = value2.value;
-              
+        document.getElementById("unmatch_value2op").innerHTML = value2.value;              
         document.getElementById("error").innerHTML = "value cannot accepted";        
+        addUnmatchedValue();
     }
 }
 
@@ -48,6 +52,32 @@ setInterval(() => {
     roll();
     check();
 }, 1000);
+
+function addMatchedValue(){
+    var m_table = document.getElementById("m_table"),
+    m_newRow = m_table.insertRow(m_table.length),
+    m_cell1 = m_newRow.insertCell(0),
+    m_cell2 = m_newRow.insertCell(1),
+    m_cell3 = m_newRow.insertCell(2)
+    
+  m_cell1.innerHTML= value1.value;
+  m_cell2.innerHTML= value2.value;
+  m_cell3.innerHTML= cnt;
+}
+
+function addUnmatchedValue(){
+    var unm_table = document.getElementById("unm_table"),
+    unm_newRow = unm_table.insertRow(unm_table.length),
+    unm_cell1 = unm_newRow.insertCell(0),
+    unm_cell2 = unm_newRow.insertCell(1),
+    unm_cell3 = unm_newRow.insertCell(2)
+    
+  unm_cell1.innerHTML= value1.value;
+  unm_cell2.innerHTML= value2.value;
+  unm_cell3.innerHTML= cnt1;
+}
+
+
 
 
 function roll1(){
